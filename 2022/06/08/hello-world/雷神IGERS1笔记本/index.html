@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>雷神IGERS1笔记本</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		#box{
+			width: 300px;
+			height: 400px;
+			/*border: 1px solid black;*/
+			float: left;
+			position: relative;
+			background-image: url(images/img2.jpg);
+			background-size: 100%;
+			text-align: center;
+		    
+		}
+		#box2{
+            text-align: center;
+            height: 400px;
+            /*border: 1px solid black;*/
+		}
+		#img{
+            position: absolute;
+            bottom: 0;
+            cursor: pointer;
+		}
+		#img1{
+			width: 60px;
+			height: 60px;
+		    /*background: red;*/
+		    float: left;
+		    background-image: url(images/img1.jpg);
+		    background-size: 100%;
+
+		}
+		#img2{
+			width: 60px;
+			height: 60px;
+		    /*background: yellow;*/
+		    float: left;
+		    background-image: url(images/img2.jpg);
+		    background-size: 100%;
+		}
+		#img3{
+			width: 60px;
+			height: 60px;
+		    /*background: blue;*/
+		    float: left;
+		    background-image: url(images/img3.jpg);
+		    background-size: 100%;
+		}
+		#img4{
+			width: 60px;
+			height: 60px;
+		    /*background: green;*/
+		    float: left;
+		    background-image: url(images/img4.jpg);
+		    background-size: 100%;
+		}
+		#img5{
+			width: 60px;
+			height: 60px;
+		    /*background: purple;*/
+		    float: left;
+		    background-image: url(images/img5.jpg);
+		    background-size: 100%;
+		}
+		.text{
+			text-align: left;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"><h3>雷神IGER笔记本电脑</h3>
+		<div id="img">
+		     <div id="img1"></div>
+		     <div id="img2"></div>
+		     <div id="img3"></div>
+		     <div id="img4"></div>
+		     <div id="img5"></div>
+		</div>
+	</div>
+	<div id="box2">
+		     <h1>雷神IGER S1笔记本</h1><br><br><br><br><br><br>
+		     <h3 class="text">详细参数</h3>
+		     <h3 class="text">处理器：i5-10210u</h3>
+		     <h3 class="text">内存:8GB(DDR4-2666MHz)海力士</h3>
+		     <h3 class="text">硬盘:三星固态硬盘(512GB)</h3>
+		     <h3 class="text">屏幕:奇美15.6英寸(IPS) 72%色域屏</h3>
+		     <h3 class="text">显卡:Nvidia Geforce MX250 (2G-雷神)</h3>
+		     <h3 class="text">音频:Auto高保真音频 立体双扬声器</h3>
+		     <h3 class="text">发布时间:2019年夏季</h3>
+		     <h3 class="text">其他:外包装x1,电源适配器x1,产品说明书x1,产品保修卡x1,产品三包x1</h3>
+
+	</div>
+</body>
+<script>
+	var box=document.getElementById('box');
+	//把HTML5里面的id数据带入JS里面
+	var img1=document.getElementById('img1');
+	//点击谁
+	img1.onmouseover=function(){
+    //执行谁
+        box.style.background="url(images/img1.jpg) no-repeat 50%";
+	}
+	var img2=document.getElementById('img2');
+	img2.onmouseover=function(){
+        box.style.background="url(images/img2.jpg) no-repeat 50%";
+	}
+	var img3=document.getElementById('img3');
+	img3.onmouseover=function(){
+        box.style.background="url(images/img3.jpg) no-repeat 50%";
+	}
+	var img4=document.getElementById('img4');
+	img4.onmouseover=function(){
+        box.style.background="url(images/img4.jpg) no-repeat 50%";
+	}
+	var img5=document.getElementById('img5');
+	img5.onmouseover=function(){
+        box.style.background="url(images/img5.jpg) no-repeat 50%";
+        
+	}
+	var img=document.getElementById('img');
+	img.onmouseout=function(){
+		box.style.background="url(images/img2.jpg) no-repeat 50%";
+	}
+</script>
+</html>
