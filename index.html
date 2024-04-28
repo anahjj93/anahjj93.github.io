@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+    <link rel='stylesheet' href='https://cdn.staticfile.net/twitter-bootstrap/5.1.1/css/bootstrap.min.css'>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        h5 {
+            color: #E33737;
+            font-weight: bold;
+        }
+        .content{
+            float: left;
+            position: absolute;
+            right: 180px;
+            top: 300px;
+        }
+        .btn{
+            width: 100px;
+            background-color: #C00000;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-3" style="position: relative" id="app">
+        <div style="float: left;">
+            <h5 class="ms-5 mb-4">江西信息应用职业技术学院认证系统</h5>
+            <img src="./f2012ae8c0a6392579faff1e341ba02d.png" alt="" width="800">
+        </div>
+        <div class="content">
+            <p class="text-danger">您已登录成功！</p>
+            <button @click="out" class="btn text-white">注销</button>
+        </div>
+    </div>
+    <div style="position: absolute;top:70%;left: 40%;font-size: 14px;">
+        <p>本计费系统由广州热点软件科技股份有限公司提供</p>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+
+        },
+        methods:{
+            out(){
+                location.replace('./test2.html');
+            }
+        }
+    })
+    
+</script>
+</html>
