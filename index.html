@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WRC</title>
+    <link rel='stylesheet' href='https://cdn.staticfile.net/twitter-bootstrap/5.1.1/css/bootstrap.min.css'>
+    <script src='https://cdn.staticfile.net/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js'></script>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+<!--整个页面开始-->
+    <div id="app">
+<!--        模态框-->
+        <div class="offcanvas show offcanvas-bottom p-1" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExample" style="height: 300px;">
+            <div class="d-flex justify-content-evenly">
+                <div style="width: 1300px;">
+                    <div class="offcanvas-header">
+                        <p class="display-6">控制您的个人数据的使用</p>
+                    </div>
+                    <div class="offcanvas-body">
+                        <p> 通过 <b style="color: #33DDE5">cookie</b> 等跟踪器识别您，收集、存储、交叉引用和传输数据，例如您的 IP 和电子邮件地址、您的软件选择和设置、您的浏览和您的 localisation，出于这些目的： 基于有限数据和广告效果衡量的广告, 个性化广告, 内容绩效衡量、受众研究和服务开发 et contenu personnalisé.</p>
+                        <p>您可以接受或拒绝所有需要您同意的跟踪器和处理 单击“继续而不接受”，了解更多信息，做出更细粒度的选择或基于合法利益反对处理 通过设置屏幕。 您可以随时通过以下方式改变主意或撤回您的同意 隐私政策. 您的选择将适用 在这些上 </p>
+                    </div>
+                </div>
+                <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
+                    <div class="mb-3"><button data-bs-dismiss="offcanvas" aria-label="Close" style="background-color: #33DDE5;border: 1px solid #33DDE5;color: white;width: 120px;height: 40px;">接受所有的</button></div>
+                    <div><a href="#" style="color: #33DDE5;">继续不接受</a></div>
+                </div>
+            </div>
+        </div>
+<!--        导航栏-->
+        <nav class="navbar navbar-expand-md bg-white fixed-top">
+<!--            Logo-->
+            <a href="#" class="nav-link active navbar-brand">
+                <img src="https://logos-download.com/wp-content/uploads/2016/11/WRC_logo_logotype.png" alt="" width="100" height="50">
+            </a>
+<!--            Links-->
+            <ul class="navbar-nav ms-5">
+                <li class="nav-item">
+                    <a href="Relly1.html" class="nav-link">WRC Relly1混合动力<span class="badge bg-danger">New</span></a>
+                </li>
+                <li class="nav-item ms-4">
+                    <a href="Relly2.html" class="nav-link">WRC Relly2</a>
+                </li>
+                <li class="nav-item ms-4">
+                    <a href="Relly3.html" class="nav-link">WRX 超级赛车</a>
+                </li>
+<!--                下拉菜单-->
+                <li class="nav-item dropdown ms-4">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">关于WRC</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about/车辆规格.html" class="dropdown-item">车辆规格</a></li>
+                        <li><a href="about/equip.html" class="dropdown-item">装备</a></li>
+                        <li><a href="https://www.playstation.com/zh-hans-hk/games/ea-sports-wrc/" class="dropdown-item">EA WRC</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    <!--        封面海报-->
+    <div class="card" style="position: relative">
+        <div class="card-body text-white" style="position: absolute;top: 120px;left: 50px;">
+            <h1 class="card-title" style="font-weight: bold">这里，非常劲爆！</h1>
+            <h2 class="card-title">披荆斩棘，所向披靡!</h2>
+            <h4 class="card-text">wrc拉力赛事是近年来最火爆的汽车运动赛事之一</h4>
+        </div>
+        <video src="audio/WRC最狂野的分站——肯尼亚站，1分钟来感受下这行走的烟雾弹，感受肯尼亚站独特的魅力.mp4" style="width: 100%;" autoplay loop muted></video>
+    </div>
+    <br>
+    <!--        内容-->
+    <div class="contents">
+        <div class="card" style="border: none">
+            <img src="https://wrc.enhance.diagnal.com/resources/images/eyJrZXkiOiJodHRwczovL2VuaGFuY2Utc3RvcmFnZS1zdGFjay1wcm9kLXdyY21lZGlhZmlsZXN0b3JhZ2UtZzN6MmhnM3Vyd2ZmLnMzLmFtYXpvbmF3cy5jb20vM2Q1NmQ1ODktMzI0My00ODVhLTk2ZmMtZWI5ZTYyNjVlZTQ5XzE5MTAyM3JiZmlubGFuZC5qcGciLCJ0aW1lc3RhbXAiOiIyMDIzLTEwLTE5VDExOjM2OjQ2LjgwOFoiLCJlZGl0cyI6eyJleHRyYWN0Ijp7ImxlZnQiOjAsInRvcCI6MCwid2lkdGgiOjM4NDAsImhlaWdodCI6MjE2MH0sInJlc2l6ZSI6eyJ3aWR0aCI6MTkyMCwiaGVpZ2h0IjoxMDgwfSwianBlZyI6eyJxdWFsaXR5IjoxMDB9fX0=/3d56d589-3243-485a-96fc-eb9e6265ee49_191023rbfinland.jpg" alt="">
+            <div class="card-body bg-white text-left border p-5" style="width:800px;opacity:0.9;margin: -200px auto;border-radius: 10px;">
+                <h2 class="text-center">2024年WRC赛程</h2>
+                <p class="bg-danger text-white text-center">预备战</p>
+                <p class="border mb-5">标志性的蒙特卡洛拉力赛 <em style="color: red;">(1月25日至28日)</em> 再次揭开了2024年竞选活动的面纱，其中包括法国阿尔卑斯山著名的图里尼山口，这是对车手的独特考验。紧随其后的是瑞典拉力赛(2月15日至18日)的冰冻森林，这是日历上唯一的纯冰雪赛事。</p>
+                <p>在其第52个赛季中， <b>WRC</b> 将在四大洲的13个迷人的目的地进行冒险，将传统与创新完美融合，与拉力赛的不朽遗产保持一致。</p>
+                <p>肯尼亚赛法瑞拉力赛发生了重大变化，它回到了更传统的3月28日至31日，而近年来一直在6月举行。这一转变将带来更严峻的考验，因为恰逢奈瓦沙雨季的开始。</p>
+                <div class="card mt-5 mb-5">
+                    <img src="https://wrc.enhance.diagnal.com/resources/images/eyJrZXkiOiJodHRwczovL2VuaGFuY2Utc3RvcmFnZS1zdGFjay1wcm9kLXdyY21lZGlhZmlsZXN0b3JhZ2UtZzN6MmhnM3Vyd2ZmLnMzLmFtYXpvbmF3cy5jb20vOWFkZjRkOWMtMDFjNy00YjQ5LWI5M2MtM2NmOTI2M2RhNWJkXzE5MTAyM2F0Y2FsZW5kYXIucG5nIiwidGltZXN0YW1wIjoiMjAyMy0xMC0xOVQxMTozODowMC40MjJaIiwiZWRpdHMiOnsiZXh0cmFjdCI6eyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9LCJyZXNpemUiOnsid2lkdGgiOjE5MjAsImhlaWdodCI6MTA4MH0sImpwZWciOnsicXVhbGl0eSI6MTAwfX19/9adf4d9c-01c7-4b49-b93c-3cf9263da5bd_191023atcalendar.png" alt="">
+                </div>
+                <p>克罗地亚拉力赛 <em style="color: red;">(4月18日至21日)</em> 自2021年WRC首次亮相以来，已经吸引了数十万观众。它独特的沥青赛道以萨格勒布首都为基础，既有光滑的，也有破碎的，这些赛道将以其所有的荣耀回归，就像沃达丰葡萄牙拉力赛 <em style="color: red;">(5月9日至12日)</em> 传奇的砾石测试一样，同样受到人群的巨大欢迎。</p>
+                <p>意大利萨丁尼亚拉力赛 <em style="color: red;">(5月30日至6月2日)</em> 将迎来地中海的魅力，之后是备受期待的ORLEN第80届波兰拉力赛 <em style="color: red;">(6月27日至30日)</em> ，该赛事自2017年以来中断了一段时间。波兰如闪电般快速的砾石公路保证了一个令人兴奋的奇观，而这个国家热情的球迷群只会进一步放大这一奇观。</p>
+                <p> <em style="color: red;">7月18日至21日</em> ，在充满活力的南部沿海城市Liepāja举办的拉脱维亚新年拉力赛上， <b>WRC</b> 热烈欢迎一位新成员的到来。基于多年来在国际汽联欧洲拉力锦标赛级别上的成功，松散的地面赛程强调了赛事上升到 <b>WRC</b> 全球舞台的明确途径。</p>
+                <div class="card mt-5 mb-5">
+                    <img src="https://wrc.enhance.diagnal.com/resources/images/eyJrZXkiOiJodHRwczovL2VuaGFuY2Utc3RvcmFnZS1zdGFjay1wcm9kLXdyY21lZGlhZmlsZXN0b3JhZ2UtZzN6MmhnM3Vyd2ZmLnMzLmFtYXpvbmF3cy5jb20vNTU4NjBhYzItOWRjOS00M2FmLThlMDItYzhlNzgyNGNiNzU2XzE5MDgyM3Jic3dlZGVuLmpwZyIsInRpbWVzdGFtcCI6IjIwMjMtMTAtMTlUMTE6NDI6MjkuMzA1WiIsImVkaXRzIjp7ImV4dHJhY3QiOnsibGVmdCI6MCwidG9wIjowLCJ3aWR0aCI6Mzg0MCwiaGVpZ2h0IjoyMTYwfSwicmVzaXplIjp7IndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9LCJqcGVnIjp7InF1YWxpdHkiOjEwMH19fQ==/55860ac2-9dc9-43af-8e02-c8e7824cb756_190823rbsweden.jpg" alt="">
+                </div>
+                <p>速度爱好者可以期待 <em>8月1日至4日</em> 举行的芬兰赛托拉力赛，它以令人瞠目结舌的速度和挑战重力的跳跃而闻名。在希腊EKO卫城拉力赛 <em>(9月5日至8日)</em> 上，这种兴奋感以另一种形式呈现出来，它蜿蜒曲折、布满岩石的山地赛段给人一种截然不同的感觉。</p>
+                <p>南美洲再次与智利生物拉力赛Bío <em>(9月26日至29日)</em> 合作，重申了该锦标赛的全球影响力。</p>
+                <p>中欧拉力赛 <em>(10月31日至11月3日)</em> 将横扫奥地利、捷克共和国和德国，这是第二轮比赛，最后一站是亚洲的FORUM8日本拉力赛 <em>(11月21日至24日)</em> 。</p>
+                <div class="card mt-5 mb-5">
+                    <img src="https://wrc.enhance.diagnal.com/resources/images/eyJrZXkiOiJodHRwczovL2VuaGFuY2Utc3RvcmFnZS1zdGFjay1wcm9kLXdyY21lZGlhZmlsZXN0b3JhZ2UtZzN6MmhnM3Vyd2ZmLnMzLmFtYXpvbmF3cy5jb20vOTQ0ZTE1M2UtZjgzYS00MjI0LThkZjYtNGY3YjhkNjc3MWM2XzE5MDgyM3Jia2VueWEuanBnIiwidGltZXN0YW1wIjoiMjAyMy0xMC0xOVQxMTo0Mjo1NC4zMTlaIiwiZWRpdHMiOnsiZXh0cmFjdCI6eyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjozODQwLCJoZWlnaHQiOjIxNjB9LCJyZXNpemUiOnsid2lkdGgiOjE5MjAsImhlaWdodCI6MTA4MH0sImpwZWciOnsicXVhbGl0eSI6MTAwfX19/944e153e-f83a-4224-8df6-4f7b8d6771c6_190823rbkenya.jpg" alt="">
+                </div>
+                <p> <b>WRC</b> 推动者总经理乔纳·西贝尔在评论赛程时说:“我们热切期待着2024年又一个精彩纷飞的赛季，我们的赛程不仅要庆祝我们受人尊敬的传统，还要推动我们走向激动人心的未来。”</p>
+                <p>“我们重返波兰，并在拉脱维亚首次亮相，这表明我们致力于为车迷和竞争对手提供新鲜而激动人心的 <b>WRC</b> 体验。”</p>
+                <p> <b>WRC</b> 赛季的每一轮比赛都将在 <b>WRC</b> 开创性的新平台拉力赛上进行现场直播。电视，以及全球各地的传统广播合作伙伴。</p>
+                <div class="card mt-5 mb-5">
+                    <img src="https://wrc.enhance.diagnal.com/resources/images/eyJrZXkiOiJodHRwczovL2VuaGFuY2Utc3RvcmFnZS1zdGFjay1wcm9kLXdyY21lZGlhZmlsZXN0b3JhZ2UtZzN6MmhnM3Vyd2ZmLnMzLmFtYXpvbmF3cy5jb20vZjIzNGJlMjQtYjM3OS00ZDg5LWFkMTUtNjE2YmE1MzZiZjhhXzE5MDgyM3JiZmFmZS5qcGciLCJ0aW1lc3RhbXAiOiIyMDIzLTEwLTE5VDExOjQzOjE5LjQzNVoiLCJlZGl0cyI6eyJleHRyYWN0Ijp7ImxlZnQiOjAsInRvcCI6MCwid2lkdGgiOjM4NDAsImhlaWdodCI6MjE2MH0sInJlc2l6ZSI6eyJ3aWR0aCI6MTkyMCwiaGVpZ2h0IjoxMDgwfSwianBlZyI6eyJxdWFsaXR5IjoxMDB9fX0=/f234be24-b379-4d89-ad15-616ba536bf8a_190823rbfafe.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--        底部海报区域-->
+    <div class="footer-paster d-flex justify-content-evenly">
+        <div><img src="https://www.hyundai.com/eu/about-hyundai/sponsoring-and-events/motorsport/wrc/i20-n-wrc-rally1.thumb.800.480.png?ck=1646231091" alt=""></div>
+        <div><img src="https://d.ifengimg.com/q100/img1.ugc.ifeng.com/newugc/20210116/2/wemedia/bf90893aa3cc1715173730ed24adcac1710c911f_size131_w975_h650.jpeg" alt=""></div>
+        <div><img src="https://www.renderhub.com/squir/ford-puma-m-sport-wrc-hybrid-rally1-2022/ford-puma-m-sport-wrc-hybrid-rally1-2022-02.jpg" alt=""></div>
+        <div><img src="https://www.car-revs-daily.com/wp-content/uploads/2015/01/2015-VW-Polo-R-WRC-8.jpg" alt=""></div>
+        <div><img src="https://pic4.zhimg.com/b1d864ba5784ac3ee2cc86551488ed4f_r.jpg?source=1940ef5c" alt=""></div>
+        <div><img src="https://ts1.cn.mm.bing.net/th/id/R-C.4e1d2b9c836cd5fe8374c4bb0ee53cf2?rik=ux6zn8MwFlVkfw&riu=http%3a%2f%2fqichequan.cn%2fuploads%2fallimg%2f190809%2f15-1ZP9232I8-50.jpg&ehk=w0mXzwOqcz56IZG0urirlDvxquf6PTayGM2ISkmuWSU%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt=""></div>
+    </div>
+    <!--        网页底部-->
+    <div class="footer">
+        <div class="container">
+            <!--            品牌赞助-->
+            <div class="footer-login d-flex mt-4" style="align-items: center;">
+                <div><img src="https://images.wrc.com/images/footer/footereas.png" alt="" style="margin-top: 30px;"></div>
+                <div><img src="https://images.wrc.com/images/footer/footerP12.png" alt="" style="margin-top: 20px;"></div>
+                <div><img src="https://images.wrc.com/images/footer/footerCleanFuels2.png" alt="" style="margin-top: 30px;"></div>
+                <div><img src="https://images.wrc.com/images/footer/footerForum.png" alt="" style="margin-top: 30px;"></div>
+                <div><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.Nm2toNBltrjo5Scr011mKAHaE4?w=243&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="" style="margin-top: 10px;"></div>
+                <div><img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.u_D8DTAvxKIoHpvwKpAkfQHaFN?w=211&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt=""></div>
+                <div><img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.s8ffl0heW8YNfDm8l5swLgHaEU?w=285&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="" style="margin-top: 10px;"></div>
+                <div><p class="text-white" data-bs-toggle="modal" data-bs-target="#myModal" style="cursor: pointer;">赞助WRC</p></div>
+                <!--赞助-模态框-->
+                <div id="myModal" class="modal fade">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+
+                            <!--头部-->
+                            <div class="modal-header d-flex justify-content-center">
+                                    <h3 class="modal-title">赞助WRC</h3>
+                                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!--内容-->
+                            <div class="modal-body d-flex justify-content-center">
+                                  <label>
+                                      赞助金额:
+                                      <input v-model="total" type="number" style="outline: none;border-top: none;border-left: none;border-right: none;font-size: 20px;" required="required">
+                                      <div class="mt-4">
+                                          <button @click="money(item)" class="btn btn-light ms-1" style="border-color: black;" v-for="item in moneyList">{{ item.value }}</button>
+                                      </div>
+                                  </label>
+                            </div>
+                            <!--底部-->
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button class="btn btn-primary" style="width:100px;" data-bs-toggle="modal" data-bs-target="#payModal">赞助</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--支付页面-模态框-->
+                <div class="modal fade" id="payModal">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header d-flex justify-content-center">
+                                    <h3 class="modal-title">支付页</h3>
+                                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body d-flex justify-content-center">
+                                    <div class="text-center p-5">
+                                        <p>请您支付 <span class="text-danger">{{ total }}</span> 元</p>
+                                        <div class="d-flex">
+                                            <div class="card me-1">
+                                                <img style="margin-left: 30px;margin-top: 18px;" src="images/8709241ca1b5458b09bfae7b9bf156e.jpg" alt="">
+                                                <div class="card-body">
+                                                    微信支付
+                                                </div>
+                                            </div>
+                                            <div class="card ms-1">
+                                                <img style="margin-left: 30px;" src="images/7d82ab2457dc98428651410bd75e411.jpg" alt="">
+                                                <div class="card-body">
+                                                    支付宝支付
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: white;">
+                <hr>
+            </div>
+            <div class="footer-info d-flex">
+                <p class="text-white" style="line-height: 50px;">@ WRC 2024 版权所有</p>
+                <div class="d-flex" style="line-height: 50px;position: absolute;right: 0;">
+                    <div><img src="https://images.wrc.com/images/footer/facebookNormal.png" alt=""></div>
+                    <div><img src="https://www.wrc.com/static/media/instagram_logo.9fcec15f.svg" alt=""></div>
+                    <div><img src="https://images.wrc.com/footer/footerTiktok.png" alt=""></div>
+                    <div><img src="https://images.wrc.com/images/footer/youtubeNormal.png" alt=""></div>
+                    <div><img src="https://images.wrc.com/footer/footerTwitter.png" alt=""></div>
+                    <div><img src="https://images.wrc.com/footer/appstore1.png" alt="" style="width: 100px;"></div>
+                    <div><img src="https://images.wrc.com/footer/playstore1.png" alt="" style="width: 100px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
